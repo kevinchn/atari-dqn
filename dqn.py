@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import gym
 import numpy as np
 import tensorflow as tf
@@ -122,7 +120,7 @@ def q_network(img, num_actions, scope=None, trainable=True):
         out = tf.contrib.layers.fully_connected(out, num_outputs=num_actions, activation_fn=None, trainable=trainable)
         return out
 
-def make_model(num_actions, discount):
+def make_model(num_actions, discount=0.99):
     # q network
     # obs here is the frame stack, not the raw observation from environment
     obs = tf.placeholder(tf.uint8, [None, 84, 84, 4])

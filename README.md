@@ -5,3 +5,11 @@ agent that uses deep learning for the action value function.
 
 To run: `python dqn.py`  
 This will start training a DQN on an Atari game.
+
+`python run_dqn.py` to run trained model for one episode.
+
+Pong  
+![](pong.gif)
+
+Centipede  
+![](centipede.gif)
